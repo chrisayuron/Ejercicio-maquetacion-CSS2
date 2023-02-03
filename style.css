@@ -1,4 +1,148 @@
-<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Softblue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Verydarkblue1 : hsl(217, 54%, 11%);/*(main BG)*/
+    --Verydarkblue2 : hsl(216, 50%, 16%)/*(card BG)*/;
+    --Verydarkblue3 : hsl(215, 32%, 27%)/*(line)*/;
+    --White: hsl(0, 0%, 100%);
+}
+html,body{
+    height: 100%;
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--Verydarkblue1);
+}
+
+.container{
+    width: 327px;
+    height: 540px;
+    margin: 62px auto;
+    background-color: var(--Verydarkblue2);
+    padding: 24px;
+    border-radius: 15px;
+}
+
+.container__image{
+    height: 274px;
+    width: 282px;
+    background-image: url('./images/image-equilibrium.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    
+}
+
+.bg-image{
+    opacity: 0; /*Opacidad en 0, no se visualiza el background color*/
+    height: 100%;
+    width: 100%;
+    background-color: hsla(178, 100%, 50%, 0.5); /*Se modificó la trasparencia en el color*/
+    background-image: url('./images/icon-view.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+  
+}
+
+.container__image:hover .bg-image{
+    opacity: 1; /*Opacidad en 1 se visualiza el color*/
+}
+
+.container__info{
+    padding-top: 25px;
+}
+
+.container__info-title{
+    color: var(--White);
+    font-weight: 600;
+}
+.container__info-title:hover{
+    color: var(--Cyan);
+}
+
+.container__info-text{
+    color: var(--Softblue);
+    font-weight: 300;
+    padding-top: 20px;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.container__info__detail{
+    padding-top: 15px;
+}
+
+.container__info__detail-offer{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.info__detail__offer-price{
+    color: var(--Cyan);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+   
+}
+
+.info__detail__offer-time{
+    color: var(--Softblue);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.container__info__detail-line{
+    border: 0.1px solid var(--Verydarkblue3);
+    margin: auto;
+}
+
+.container__info__detail-perfil{
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: 300;
+   
+}
+
+.info__detail__perfil-photo{
+    background-image: url(./images/image-avatar.png);
+    height: 34px;
+    width: 34px;
+    border-radius:50% ;
+    background-position: center;
+    background-size: contain;
+    border: solid 1px var(--White);
+   
+}
+
+.info__detail__perfil-name{
+    color: var(--Softblue);
+}
+.info__detail__perfil-name span{
+    color: var(--White);
+}
+
+.info__detail__perfil-name span:hover{
+    color: var(--Cyan);
+}
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
-</style>
+
+@media (min-width:1440px){
+    .container{
+        margin: 150px auto;
+    }
+}
